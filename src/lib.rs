@@ -1,10 +1,8 @@
 use std::{future::Future, pin::Pin};
 
+use actix_cloud::{async_trait, tokio::sync::oneshot};
 use entity::tasks;
-use skynet_api::{
-    actix_cloud::tokio::sync::oneshot, async_trait, request::Condition,
-    sea_orm::DatabaseTransaction, uuid, HyUuid, Result,
-};
+use skynet_api::{request::Condition, sea_orm::DatabaseTransaction, uuid, HyUuid, Result};
 
 pub mod entity;
 
